@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakezy-About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+:root{
+    --black: #1B1722;
+    --white : #F0F0F0;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Page Header */
+#pageheader {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 10px;
+    box-shadow: var(--box-shadow);  
+}
+
+#pageheader h2 {
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+#pageheader p {
+    font-size: 1.7rem;
+}
+/* General styling for the About Us section */
+#aboutdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+/* Styling for the image */
+.about-img {
+    width: 40%;
+    border-radius: 28px;
+    height: auto; /* Maintain aspect ratio of the image */
+}
+
+/* Styling for the text section */
+.about-text {
+    width: 55%;
+    font-size: 1.9rem;
+}
+
+.about-text h1 {
+    font-size: 5.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Marquee styling */
+marquee {
+    margin-top: 20px;
+    font-size: 1.9rem;
+    background-color: #333;
+    color: white;
+    font-size: medium;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    /* Adjust flex layout for tablet devices */
+    #aboutdiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img {
+        width: 80%; /* Increase image width for better fit */
+        margin-bottom: 20px; /* Add spacing between image and text */
+    }
+
+    .about-text {
+        width: 90%; /* Ensure text fits properly */
+        font-size: 1.6rem; /* Adjust font size for readability */
+    }
+
+    .about-text h1 {
+        font-size: 3.5rem; /* Scale down heading size */
+    }
+
+    .about-text p {
+        font-size: 1.3rem; /* Make paragraph text smaller on smaller screens */
+    }
+
+    marquee {
+        font-size: 1.5rem; /* Adjust marquee text size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further adjustments for smaller screens */
+    .about-text h1 {
+        font-size: 2.8rem; /* Scale down heading size even more */
+    }
+
+    .about-text p {
+        font-size: 1.1rem; /* Further reduce paragraph font size */
+    }
+
+    marquee {
+        font-size: 1.3rem; /* Smaller font size for scrolling text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile-specific adjustments */
+    #aboutdiv {
+        margin: 20px; /* Reduce margin for mobile devices */
+    }
+
+    .about-img {
+        width: 90%; /* Image takes more width on small screens */
+    }
+
+    .about-text {
+        width: 100%; /* Ensure text takes full width */
+        font-size: 1.7rem; /* Further reduce text size for mobile */
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem; /* Adjust heading size for mobile */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Further reduce paragraph font size */
+    }
+
+    marquee {
+        font-size: 1.7rem; /* Small text size for marquee */
+    }
+}
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Google Map Section */
+#map-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+/* Shop Address Styling */
+#shop-address {
+    width: 35%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#shop-address h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#shop-address p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+#shop-address p i {
+    margin-right: 10px;
+    color: #ff6f61;
+}
+
+#shop-address a {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#shop-address a:hover {
+    text-decoration: underline;
+}
+
+/* Hover Effect */
+#shop-address:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Google Map Styling */
+#google-map {
+    width: 60%;
+    border-radius: 8px;
+}
+
+#google-map iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+
+/* For Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    /* Adjust layout for map and address section */
+    #map-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #shop-address {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #google-map {
+        width: 80%;
+    }
+
+    /* Adjust text sizes */
+    #shop-address h3 {
+        font-size: 1.8rem;
+    }
+
+    #shop-address p {
+        font-size: 1.1rem;
+    }
+
+    #google-map iframe {
+        height: 400px; /* Reduce map height */
+    }
+}
+
+/* For Smaller Mobile Devices */
+@media (max-width: 768px) {
+    #map-section {
+        margin: 20px 0;
+    }
+
+    #shop-address {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #google-map {
+        width: 90%;
+    }
+
+    #shop-address h3 {
+        font-size: 1.6rem;
+    }
+
+    #shop-address p {
+        font-size: 1rem;
+    }
+
+    #google-map iframe {
+        height: 350px;
+    }
+}
+
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+    #shop-address {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #google-map {
+        width: 100%;
+    }
+
+    #shop-address h3 {
+        font-size: 1.5rem;
+    }
+
+    #shop-address p {
+        font-size: 0.9rem;
+    }
+
+    #google-map iframe {
+        height: 300px;
+    }
+}
+
+/* Newsletter Section */
+#newslater {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+#newslater .newstxt h4 {
+    font-size: 3.1rem;
+    font-weight: bold;
+}
+
+#newslater .newstxt p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+#newslater .form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#newslater .form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    width: 250px;
+}
+
+#newslater .form button {
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newslater .form button:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+
+/* For Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    /* Adjust layout for map and address section */
+    
+    #newslater {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.5rem;
+    
+    }
+
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.3rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;}
+    /* Adjust the newsletter section for smaller screens */
+@media (max-width: 768px) {
+    #newslater {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.4rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.2rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.5rem;
+        width: 180px;
+    }
+}
+}
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+    
+    #newslater .newstxt h4 {
+        font-size: 1.8rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 180px;
+        font-size: 1.2rem;
+    }
+
+    #newslater .form button {
+        font-size: 1rem;
+        width: 150px;
+    }
+}
+
+/* General Section Styling */
+#feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    gap: 20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Responsive Containers */
+.fr1, .fr2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Feature Box Styling */
+.featurebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Standard max width for larger screens */
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featurebox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.fsimg {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.featurebox h4 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) { /* Tablets */
+    .fr1, .fr2 {
+        flex-direction: row; /* Two in a line */
+        justify-content: space-evenly;
+    }
+    .featurebox {
+        width: 45%; /* Two boxes per row with gap */
+    }
+}
+
+@media (max-width: 768px) { /* Small tablets and large phones */
+    .fr1, .fr2 {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+    }
+    .featurebox {
+        width: 90%; /* Fit smaller screens */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Phones */
+    #feature {
+        padding: 10px;
+    }
+    .featurebox h4 {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <h1 class="logoName">Bakezy </h1>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="product.html">product</a>
+            <a href="blog.html">blogs</a>
+            <a href="#">about</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <br><br><br>
+    <main>
+        <!-- Page Header Section -->
+        <section id="pageheader" class="aboutheader">
+            <h2>Know Us</h2>
+            <p>Serving Sweet Delights: Discover the Story Behind Our Cake Shop</p>
+        </section>
+    
+        <!-- About Us Section -->
+        <div id="aboutdiv" class="section-p1">
+            <img src="images/about us.avif" alt="About Us Image" class="about-img" />
+            <div class="about-text">
+                <h1>Who are we?</h1>
+                <p>At Bakezy, we are passionate about making every occasion sweeter and more memorable with our handcrafted treats. Our mission is to deliver freshly baked delights that combine exceptional taste with premium quality. Whether it’s a celebration, a craving, or a thoughtful gift, we aim to bring smiles to your moments through our wide range of cakes, cookies, pastries, and more.Bakezy is more than just a bakery; it’s a place where every bite tells a story of love, care, and excellence</p>
+            
+    
+                <marquee behavior="" direction="">Where Every Slice is a Sweet Delight ~ Welcome to Bakezy</marquee>
+            </div>
+        </div>
+    
+        <!-- Features Section -->
+        <section id="feature" class="section-p2">
+            <div class="fr1">
+                <div class="featurebox">
+                    <img src="images/4002764.jpg" alt="Free Shipping" class="fsimg" />
+                    <h4>Free Shipping</h4>
+                </div>
+                <div class="featurebox">
+                    <img src="images/4676729.jpg" alt="Order Online" class="fsimg" />
+                    <h4>Order Online</h4>
+                </div>
+                <div class="featurebox">
+                    <img src="images/3567810.jpg" alt="Save Money" class="fsimg" />
+                    <h4>Save Money</h4>
+                </div>
+            </div>
+            <div class="fr2">
+                 <div class="featurebox">
+                     <img src="images/6914328.jpg" alt="Promotions" class="fsimg" />
+                     <h4>Promotions</h4>
+                 </div>
+                 <div class="featurebox">
+                     <img src="images/20944426.jpg" alt="24/7 Support" class="fsimg" />
+                     <h4>24/7 Support</h4>
+                 </div>
+                 <div class="featurebox">
+                     <img src="images/10144194.jpg" alt="Happy Sell" class="fsimg" />
+                     <h4>Happy Sell</h4>
+                 </div>
+            </div>
+        </section>
+        
+    
+        
+    
+    
+        
+        <section id="map-section">
+            <div id="shop-address">
+                <h3>Visit Us!</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum autem doloremque qui esse aperiam consectetur impedit voluptatem et? Quae, doloribus!</p>
+                <p><i class="fas fa-clock"></i> Opening Hours: Monday to Friday, 9 AM - 6 PM</p>
+                <p><i class="fas fa-gift"></i> Special Offers: Every Friday, 10% off!</p>
+                <p><i class="fas fa-phone-alt"></i> Call Us: +123 456 7890</p>
+                <a href="https://www.google.com/maps" target="_blank"><i class="fas fa-location-arrow"></i> View on Google Maps</a>
+            </div>
+            <div id="google-map">
+                <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34335.24189844416!2d77.10259326076123!3d28.749857032213682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1db9c545799f%3A0xd22d8597e9e9ed7a!2sRohini%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1702936959237!5m2!1sen!2sus" 
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newslater">
+            <div class="newstxt">
+                <h4>Sign up for Newsletters</h4>
+                <p>Get E-mail updates about our latest cakes and special offers.</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-mail Address" />
+                <button>Sign Up</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                    <h1 class="logoName"> Bakezy </h1>
+                </div>
+                <p>From our oven to your heart, bringing warmth and sweetness in every bite.</p>
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>jigyasaxxxxx@gmail.com</a>
+                
+            </div>
+        </div>
+        <div class="credit">
+            created by <span>Jigyasa</span> |All Rights Reserved !
+        </div>
+    </footer>
+    
+    <!-- custom js file  -->
+    <script src="index.js"></script>
+</body>
+</html>

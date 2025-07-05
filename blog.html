@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakezy-Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+:root {
+  --black: #1B1722;
+  --white: #F0F0F0;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+#pageheader {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: var(--box-shadow);
+}
+
+#pageheader h2 {
+  font-size: 5rem;
+  margin-bottom: 6px;
+}
+
+#pageheader p {
+  font-size: 1.5rem;
+}
+/*main section stying */
+#blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.blogbox {
+  background-color: var(--white);
+  width: calc((100% - 58px) / 3); /* 3 items per row with 29px gap */
+  max-width: 400px; /* Limit the width */
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blogbox:hover {
+  transform: scale(1.05);
+}
+
+.blogimg {
+  width: 100%;
+  height: 350px;
+  overflow: hidden; 
+  padding-top: 40px;
+}
+
+.blogimg img {
+  width: 80%;
+  object-fit: cover; 
+}
+
+.blogdets {
+  padding: 20px;
+}
+
+.blogdets h4 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blogdets p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+#blog h1 {
+  font-size: 1.2rem;
+  color: var(--black);
+  background-color: var(--white);
+  padding: 10px;
+  border-top: 2px solid var(--black);
+  margin-top: -5px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+  .blogbox {
+    width: calc((100% - 29px) / 2); /* 2 per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blogbox {
+    width: 100%; /* 1 per row */
+  }
+}
+
+
+
+#newslater {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  
+}
+
+#newslater .newstxt h4 {
+  font-size: 3.1rem;
+  font-weight: bold;
+}
+
+#newslater .newstxt p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+#newslater .form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#newslater .form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 250px;
+}
+
+#newslater .form button {
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newslater .form button:hover {
+  background-color: #ddd;
+}
+/* For Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    /* Adjust layout for map and address section */
+    
+    #newslater {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.5rem;
+    
+    }
+
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.3rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;}
+    /* Adjust the newsletter section for smaller screens */
+@media (max-width: 768px) {
+    #newslater {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.4rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.2rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.5rem;
+        width: 180px;
+    }
+}
+}
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+    
+    #newslater .newstxt h4 {
+        font-size: 1.8rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 180px;
+        font-size: 1.2rem;
+    }
+
+    #newslater .form button {
+        font-size: 1rem;
+        width: 150px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <h1 class="logoName">Bakezy </h1>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="product.html">product</a>
+            <a href="#blog">blogs</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <br><br><br>
+    <section id="pageheader" class="blogheader">
+        <h2>Read more</h2>
+        <p>
+          Discover Delicious Recipes, Baking Tips, and Cake Decorating
+          Inspiration!
+        </p>
+      </section>
+  
+      <section id="blog">
+        <div class="blogbox">
+          <div class="blogimg">
+            <img src="images/truffle.webp" alt="" />
+          </div>
+  
+          <div class="blogdets">
+            <h4>
+              Indulge in the Delightful Flavors of a Freshly Baked Fruit Cake
+            </h4>
+            <p>
+              Dive into the world of a mouthwatering fruit cake that combines the
+              perfect blend of sweetness and tanginess. Discover the secrets to
+              baking a moist and flavorful fruit cake using seasonal fruits,
+              wholesome ingredients, and expert techniques. Get ready to savor
+              every bite of this classic dessert that's sure to be a highlight of
+              any celebration or cozy gathering. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum soluta 
+            </p>
+          </div>
+          <h1>13/01</h1>
+        </div>
+        <div class="blogbox">
+          <div class="blogimg">
+            <img src="images/vanillacake.jpg" alt="" />
+          </div>
+  
+          <div class="blogdets">
+            <h4>Indulge in the Divine Decadence of a Homemade Chocolate Cake</h4>
+            <p>
+              Prepare to embark on a chocolate lover's dream as we dive into the
+              world of a heavenly homemade chocolate cake. In this blog post, we
+              unveil the secrets to creating a moist, rich, and irresistible
+              chocolate cake that will leave your taste buds in awe. From
+              selecting the finest quality cocoa powder to mastering the perfect
+              balance of sweetness, this recipe and guide will walk you through
+              every step of the process.
+            </p>
+          </div>
+          <h1>15/02</h1>
+        </div>
+        <div class="blogbox">
+          <div class="blogimg">
+            <img src="images/choco.jpg" alt="" />
+          </div>
+  
+          <div class="blogdets">
+            <h4>
+              Indulge in the Irresistible Bliss of a Nutty Chocolate Chip Pie
+            </h4>
+            <p>
+              Get ready to experience pure dessert heaven with a delectable
+              combination of crunchy nuts and luscious chocolate chips in a
+              mouthwatering pie. This blog post takes you on a delightful journey
+              as we explore the art of creating a homemade pie that will satisfy
+              your sweet tooth and leave you craving for more. Discover the
+              perfect balance of flavors and textures, from the rich and gooey
+              chocolate chips to the delightful crunch of roasted nuts.
+            </p>
+          </div>
+          <h1>11/03</h1>
+        </div>
+        <div class="blogbox">
+          <div class="blogimg">
+            <img src="images/bluee.jpg" alt="" />
+          </div>
+          <div class="blogdets">
+            <h4>
+              Indulge in the Delightful Flavors of a Freshly Baked Fruit Cake
+            </h4>
+            <p>
+              Dive into the world of a mouthwatering fruit cake that combines the
+              perfect blend of sweetness and tanginess. Discover the secrets to
+              baking a moist and flavorful fruit cake using seasonal fruits,
+              wholesome ingredients, and expert techniques. Get ready to savor
+              every bite of this classic dessert that's sure to be a highlight of
+              any celebration or cozy gathering. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum soluta 
+            </p>
+          </div>
+          <h1>13/01</h1>
+        </div>
+        <div class="blogbox">
+          <div class="blogimg">
+            <img src="images/blueberryy.jpg" alt="" />
+          </div>
+  
+          <div class="blogdets">
+            <h4>Indulge in the Divine Decadence of a Homemade Chocolate Cake</h4>
+            <p>
+              Prepare to embark on a chocolate lover's dream as we dive into the
+              world of a heavenly homemade chocolate cake. In this blog post, we
+              unveil the secrets to creating a moist, rich, and irresistible
+              chocolate cake that will leave your taste buds in awe. From
+              selecting the finest quality cocoa powder to mastering the perfect
+              balance of sweetness, this recipe and guide will walk you through
+              every step of the process.
+            </p>
+          </div>
+          <h1>15/02</h1>
+        </div>
+        <div class="blogbox">
+          <div class="blogimg">
+            <img src="images/bluefinal.jpg" alt="" />
+          </div>
+  
+          <div class="blogdets">
+            <h4>
+              Indulge in the Irresistible Bliss of a Nutty Chocolate Chip Pie
+            </h4>
+            <p>
+              Get ready to experience pure dessert heaven with a delectable
+              combination of crunchy nuts and luscious chocolate chips in a
+              mouthwatering pie. This blog post takes you on a delightful journey
+              as we explore the art of creating a homemade pie that will satisfy
+              your sweet tooth and leave you craving for more. Discover the
+              perfect balance of flavors and textures, from the rich and gooey
+              chocolate chips to the delightful crunch of roasted nuts.
+            </p>
+          </div>
+          <h1>11/03</h1>
+        </div>
+      
+      </section>
+  
+      <section id="newslater">
+        <div class="newstxt">
+          <h4>Sign up for Newsletters</h4>
+          <p>Get E-mail updates about our latest cakes and special offers.</p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your E-mail Address" />
+          <button>Sign Up</button>
+        </div>
+      </section>
+
+    
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                    <h1 class="logoName"> Bakezy </h1>
+                </div>
+                <p>From our oven to your heart, bringing warmth and sweetness in every bite.</p>
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>jigyasatnwr667@gmail.com</a>
+                
+            </div>
+        </div>
+        <div class="credit">
+            created by <span>Jigyasa</span> |All Rights Reserved !
+        </div>
+    </footer>
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- custom js file  -->
+    <script src="index.js"></script>
+</body>
+</html>

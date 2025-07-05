@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakezy-Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+      /* Page Header */
+#pageheader {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 10px;
+    box-shadow: var(--box-shadow);  
+}
+
+#pageheader h2 {
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+#pageheader p {
+    font-size: 1.7rem;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.shop{
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+.abc{
+    display: flex;
+    justify-content: space-between;
+}
+.card h3 {
+    font-size: 1.6em;
+    
+    color: #333;
+}
+
+.card p {
+    font-size: 1.5em;
+    color: #666;
+    font-weight: bolder;
+    
+}
+
+.stars {
+    color: gold;
+    
+    font-size: 1.7rem;
+}
+
+button {                
+    background-color: var(--black);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: 0.3s;
+    height: 40px;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card h3 {
+        font-size: 1em;
+    }
+}
+#newslater {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+#newslater .newstxt h4 {
+    font-size: 3.1rem;
+    font-weight: bold;
+}
+
+#newslater .newstxt p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+#newslater .form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#newslater .form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    width: 250px;
+}
+
+#newslater .form button {
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newslater .form button:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+
+/* For Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    /* Adjust layout for map and address section */
+    
+    #newslater {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.5rem;
+    
+    }
+
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.3rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;}
+    /* Adjust the newsletter section for smaller screens */
+@media (max-width: 768px) {
+    #newslater {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.4rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.2rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.5rem;
+        width: 180px;
+    }
+}
+}
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+    
+    #newslater .newstxt h4 {
+        font-size: 1.8rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 180px;
+        font-size: 1.2rem;
+    }
+
+    #newslater .form button {
+        font-size: 1rem;
+        width: 150px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <h1 class="logoName">Bakezy </h1>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="product.html">product</a>
+            <a href="blog.html">blogs</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <br><br><br><br>
+    
+    <section id="pageheader" class="aboutheader">
+      <h2>Shop With Us</h2>
+      <p>Serving Sweet Delights: Discover the Story Behind Our Cake Shop</p>
+    </section>
+    <section class="shopp">
+      <div class="container">
+          
+          <div class="card">
+            <img src="images/chocowrap.jpg" alt="Red Velvet Cake">
+            <h3>Choco Heaven Cake</h3>
+            <div class="abc">
+                <div>
+                    <div class="stars">
+                        ★ ★ ★ ★ ★
+                    </div>
+                    <p>₹ 520</p>
+                </div>
+                <button><i class="fas fa-shopping-cart"></i></button>
+            </div>  
+            </div>
+
+          
+          <div class="card">
+              <img src="images/download.jpg" alt="Strawberry Cake">
+              <h3>Strawberry Cake</h3>
+              <div class="abc">
+                <div>
+                    <div class="stars">
+                        ★ ★ ★ ★ ★
+                    </div>
+                    <p>₹ 470</p>
+                </div>
+                <button><i class="fas fa-shopping-cart"></i></button>
+            </div>  
+              </div>
+
+          
+          <div class="card">
+              <img src="images/chocolate-truffle-cake-8844.jpg" >
+              <h3>Dark Chocolate Cake</h3>
+              <div class="abc">
+                <div>
+                    <div class="stars">
+                        ★ ★ ★ ★ ★
+                    </div>
+                    <p>₹ 600</p>
+                </div>
+                <button><i class="fas fa-shopping-cart"></i></button>
+            </div>  
+          </div>
+
+          
+          <div class="card">
+              <img src="images/strawvanilla.jpg" alt="Chocolate Cake">
+              <h3>Strawberry-Blueberry Cake</h3>
+              <div class="abc">
+                <div>
+                    <div class="stars">
+                        ★ ★ ★ ★ ★
+                    </div>
+                    <p>₹ 590</p>
+                </div>
+                <button><i class="fas fa-shopping-cart"></i></button>
+            </div>  
+          </div>
+
+      
+      <div class="card">
+        <img src="images/image-RB18W6-1706080823.jpg" alt="Red Velvet Cake">
+        <h3>Vanilla-Red Velvet Cake</h3>
+        <div class="abc">
+            <div>
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+                <p>₹ 420</p>
+            </div>
+            <button><i class="fas fa-shopping-cart"></i></button>
+        </div>  
+      </div>
+      
+      
+      <div class="card">
+        <img src="images/choco.jpg" alt="Strawberry Cake" >
+        <h3>Chocochip Cake</h3>
+        <div class="abc">
+            <div>
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+                <p>₹ 420</p>
+            </div>
+            <button><i class="fas fa-shopping-cart"></i></button>
+        </div>  
+      </div>
+      
+      
+      <div class="card">
+        <img src="images/chocolate-caramel-fudge-cake-half-kg-eggless_1.webp" alt="Cherry Cake">
+        <h3>Choco-Oreo Cake</h3>
+        <div class="abc">
+            <div>
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+                <p>₹ 700</p>
+            </div>
+            <button><i class="fas fa-shopping-cart"></i></button>
+        </div>  
+      </div>
+      
+      
+      <div class="card">
+        <img src="images/image-TRHJLD-1681839381.jpg" alt="blueberry5 Cake">
+        <h3>Red Velvet Cake</h3>
+        <div class="abc">
+            <div>
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+                <p>₹ 320</p>
+            </div>
+            <button><i class="fas fa-shopping-cart"></i></button>
+        </div>  
+      </div>
+
+      </div>
+      <div></div></section>
+      <br>
+<section id="newslater">
+    <div class="newstxt">
+      <h4>Sign up for Newsletters</h4>
+      <p>Get E-mail updates about our latest cakes and special offers.</p>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="Your E-mail Address" />
+      <button>Sign Up</button>
+    </div>
+</section>
+
+<footer class="footer" id="contact">
+    <div class="box-container">
+        <div class="mainBox">
+            <div class="content">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+                <h1 class="logoName"> Bakezy </h1>
+            </div>
+            <p>From our oven to your heart, bringing warmth and sweetness in every bite.</p>
+        </div>
+        <div class="box">
+            <h3>Quick link</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+        </div>
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+            <a href="#"> <i class="fas fa-envelope"></i>jigyasaxxxxx@gmail.com</a>
+            
+        </div>
+    </div>
+    <div class="credit">
+        created by <span>Jigyasa</span> |All Rights Reserved !
+    </div>
+</footer>
+    
+    
+    <script src="index.js"></script>
+</body>
+</html>

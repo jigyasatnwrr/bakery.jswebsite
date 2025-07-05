@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bakery</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        
+        :root {
+    --black: #1B1722;
+    --white: #F0F0F0;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+:root{
+    --black: #1B1722;
+    --white : #F0F0F0;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;   
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+    border-radius: 5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    top: 0;right: 0;left: 0;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 1.4rem 7%;
+    z-index: 999;
+}
+.header .logoContent{
+    display: flex;
+    align-items: center;
+}
+.header .logoContent .logo img{
+    height: 4rem;
+}
+.header .logoContent .logoName {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: var(--black);
+    font-weight: bold;
+}
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+.header .icon i{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search{
+    display: none;
+    top: 100%;
+    margin: 1.5rem 7%;
+    background-color: transparent;
+    width: 50%;
+    right: 0;
+    height: 5rem;
+    position:  absolute;
+
+}
+.header .search input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    margin-right: 7%;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow);
+}
+.header .search.active{
+    display: inline-block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+}
+main{
+    font-size: larger;
+}
+header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+.conthead{
+    text-align: center;
+    padding-top: 1.5%;
+    font-size: large;
+    background-color: black; 
+    color: white; 
+    padding: 35px;
+}
+
+
+.footer {
+    background: url(images/backGround.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+.footer .box-container .mainBox .content{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.footer .box-container .mainBox .content h1{
+    font-size: 2rem;
+    color: var(--black);
+}
+.footer .box-container .mainBox p{
+    font-size: 1.7rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: var(--black);
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+.footer .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--black);
+    margin: 0 .3rem;
+    border-radius: 50%;
+
+}
+.footer .share a:hover{
+    background: var(--white);
+    color: var(--black);
+}
+.footer .credit{
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    color: var(--black);
+    text-align: center;
+}
+/* Modal Styles */
+.modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+        }
+        .modal-content h2 {
+            font-size: 1.5rem;
+        }
+        .modal-content button {
+            padding: 10px 20px;
+            background-color: var(--black);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .modal-content button:hover {
+            background-color: #333;
+        }
+        @media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.3rem 3rem;
+    }
+    .home .homeContent{
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bar{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        background-color: var(--white);
+        height: 80vh;
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    .header .navbar a{
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+
+    .home .homeContent{
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    }
+}
+/* Hide the hamburger menu on larger screens (laptop and above) */
+@media (min-width: 1024px) {
+    #menu-bar {
+        display: none;
+    }
+}
+
+/* Show the hamburger menu on smaller screens (mobile/tablet) */
+@media (max-width: 1023px) {
+    #menu-bar {
+        display: inline-block;
+    }
+}
+
+.form-group7 {
+  display: flex;
+  align-items: center;
+  
+}
+#countryCode{
+    margin-right: 7px;
+}
+
+
+#newslater {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  
+}
+
+#newslater .newstxt h4 {
+  font-size: 3.1rem;
+  font-weight: bold;
+}
+
+#newslater .newstxt p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+#newslater .form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#newslater .form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 250px;
+}
+
+#newslater .form button {
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newslater .form button:hover {
+  background-color: #ddd;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto; /* Add margin to avoid overlap */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure proper positioning */
+    
+}
+
+.contact-image, .contact-form-container {
+    flex: 1 1 50%;
+    position: relative;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.contact-form-container {
+    flex: 1 1 50%;
+    padding: 40px;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-image, .contact-form-container {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-container {
+        padding: 20px;
+    }
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* For Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    /* Adjust layout for map and address section */
+    
+    #newslater {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.5rem;
+    
+    }
+
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.3rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;}
+    /* Adjust the newsletter section for smaller screens */
+@media (max-width: 768px) {
+    #newslater {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newslater .newstxt h4 {
+        font-size: 2.4rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.2rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 200px;
+    }
+
+    #newslater .form button {
+        font-size: 1.5rem;
+        width: 180px;
+    }
+}
+}
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+    
+    #newslater .newstxt h4 {
+        font-size: 1.8rem;
+    }
+    #newslater .newstxt p {
+        font-size: 1.1rem;
+        padding-bottom: 15.8px;
+    }
+    #newslater .form input {
+        width: 180px;
+        font-size: 1.2rem;
+    }
+
+    #newslater .form button {
+        font-size: 1rem;
+        width: 150px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <h1 class="logoName">Bakezy </h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="product.html">product</a>
+            <a href="blog.html">blogs</a>
+            <a href="about.html">about</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <br><br><br><br><br><br>
+    <div></div>
+    <main>
+        <div class="conthead">
+            <h1>Sweet Connections</h1><br>
+            <P>Reach Out To Us </P>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form-container">
+
+                <form id="contact-form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your First name">
+                        <span id="name-error" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Last Name (Optional)</label>
+                        <input type="text" id="lname" name="lname" placeholder="Enter your Last name">
+                        <span id="name-error" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email">
+                        <span id="email-error" class="error-message"></span>
+                    </div>
+                    <label for="phone">Phone Number:</label> <br>
+                    <div class="form-group7" id="contactForm">
+                        <select id="countryCode" name="countryCode">
+                            <option value="+91">+91 (India)</option>
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+61">+61 (Australia)</option>
+                            <option value="+81">+81 (Japan)</option>
+                            <option value="+33">+33 (France)</option>
+                            <option value="+49">+49 (Germany)</option>
+                            <option value="+55">+55 (Brazil)</option>
+                            <option value="+91">+91 (India)</option>
+                            <option value="+34">+34 (Spain)</option>
+                            <option value="+39">+39 (Italy)</option>
+                        </select>
+                        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        <span id="error" style="color: red; display: none;">Please enter a valid 10-digit phone number.</span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Type message here!!!"></textarea>
+                        <span id="message-error" class="error-message"></span>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+             <!-- Right Side Image -->
+            <div class="contact-image">
+                <img src="images/8040829.jpg" alt="About Us Image"  />
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <h2>Your message has been sent successfully!</h2>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <div></div>
+    <div></div>
+    <section id="newslater">
+        <div class="newstxt">
+    <h4>Sign up for Newsletters</h4>
+    <p>Get E-mail updates about our latest cakes and special offers.</p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your E-mail Address" />
+        <button>Sign Up</button>
+    </div>
+    </section>
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                    <h1 class="logoName"> Bakezy </h1>
+                </div>
+
+                <p>From our oven to your heart, bringing warmth and sweetness in every bite.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Products</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>jigyasaxxxxx@gmail.com</a>
+                
+            </div>
+
+        </div>
+        <div class="credit">
+            Created by <span>Jigyasa</span> |All Rights Reserved ! 
+        </div>
+    </footer>
+    
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById("name-error").style.display = "none";
+            document.getElementById("email-error").style.display = "none";
+            document.getElementById("message-error").style.display = "none";
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Check if Name is empty
+            if (name.trim() === "") {
+                document.getElementById("name-error").textContent = "Name is required!";
+                document.getElementById("name-error").style.display = "block";
+                isValid = false;
+            }
+
+            // Check if Email is empty
+            if (email.trim() === "") {
+                document.getElementById("email-error").textContent = "Email is required!";
+                document.getElementById("email-error").style.display = "block";
+                isValid = false;
+            }
+
+            // Check if Message is empty
+            if (message.trim() === "") {
+                document.getElementById("message-error").textContent = "Message is required!";
+                document.getElementById("message-error").style.display = "block";
+                isValid = false;
+            }
+
+            // If form is valid, show the modal
+            if (isValid) {
+                showModal();
+            }
+
+            return false; // Prevent form submission for demo purposes
+        }
+
+        function showModal() {
+            const modal = document.getElementById('success-modal');
+            modal.style.display = 'flex'; // Show the modal
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.style.display = 'none'; // Hide the modal
+        }
+        // Add real-time validation to the phone number field
+document.getElementById('phone').addEventListener('input', function() {
+    var phone = this.value;
+    var phoneNumber = phone.replace(/\D/g, ''); // Remove non-numeric characters
+    
+    if (phoneNumber.length !== 10) {
+        document.getElementById('error').style.display = 'block';
+    } else {
+        document.getElementById('error').style.display = 'none';
+    }
+});
+let navbar = document.querySelector('.navbar');
+document.querySelector('#menu-bar').onclick=() =>{
+    navbar.classList.toggle('active');
+}
+
+
+
+let search = document.querySelector('.search');
+document.querySelector('#search').onclick=() =>{
+    search.classList.toggle('active');
+}
+
+    </script>
+    
+</body>
+</html>
